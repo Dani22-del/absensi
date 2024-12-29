@@ -24,6 +24,7 @@ class LoginController extends Controller
             if (Auth::user()->level_user == "admin") {
                 $request->session()->regenerate();
                 return ['code' => '200', 'status' => 'success', 'message' => 'Berhasil Login', 'redirect' => url('/')];
+                
             } else {
                 return ['code' => '201', 'status' => 'error', 'message' => 'Error: Anda tidak memiliki akses'];
             }

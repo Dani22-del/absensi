@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -12,16 +13,11 @@ Route::group(['prefix' => 'login'], function () {
     Route::get('/', [LoginController::class, 'login'])->name('login');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::post('/login/aksi_login', [LoginController::class, 'aksi_login'])->name('aksi_login');
-    // Route::post('/sales-order/add-sales', [SalesOrderController::class, 'createSales'])->name('form-add-sales');
-    // Route::post('/sales-order/detail-sales', [SalesOrderController::class, 'detailSales'])->name(
-    //     'form-detail-sales-order'
-    // );
 });
 Route::middleware(['CheckLogin'])->group(function () {
     Route::get('/', function () {
         return view('sales.main');
     });
-    
     Route::group(['prefix' => 'sales'], function () {
         Route::get('/', [SalesController::class, 'index'])->name('data-sales');
         Route::post('/add-sales', [SalesController::class, 'addSales'])->name('form-add-sales');

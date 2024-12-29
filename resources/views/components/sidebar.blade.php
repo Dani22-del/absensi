@@ -24,29 +24,4 @@
             <div data-i18n="Absensi">Absensi</div>
         </a>
     </li>
-    
-    <!-- Layouts -->
-    {{-- <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons ri-file-copy-line"></i>
-            <div data-i18n="Sales">Sales</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="" class="menu-link">
-                    <div data-i18n="Sales Order">Sales Order</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="" class="menu-link">
-                    <div data-i18n="Data Sales">Data Sales</div>
-                </a>
-            </li>
-            
-        </ul>
-    </li> --}}
-
-    <!-- Front Pages -->
-    
 </ul>
